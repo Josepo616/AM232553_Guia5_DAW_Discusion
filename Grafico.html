@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico de Uso de Navegador/SO</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Gráfico de Uso de Navegador/SO</h1>
+
+    <form id="optionsForm">
+        <label>
+            <input type="radio" name="data" value="navegador" checked>
+            Uso del Navegador
+        </label>
+        <label>
+            <input type="radio" name="data" value="sistema_operativo">
+            Uso del Sistema Operativo
+        </label>
+
+        <br><br>
+
+        <label for="colorPicker">Color del Gráfico:</label>
+        <input type="color" id="colorPicker" value="#3e95cd"><br><br>
+
+        <label>
+            Orientación de las Barras:
+            <select id="orientation">
+                <option value="vertical">Vertical</option>
+                <option value="horizontal">Horizontal</option>
+            </select>
+        </label>
+
+        <br><br>
+
+        <button type="button" onclick="updateChart()">Actualizar Gráfico</button>
+    </form>
+
+    <canvas id="myChart" width="400" height="400"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2"></script>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
